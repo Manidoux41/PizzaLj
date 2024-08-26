@@ -1,50 +1,98 @@
-# Welcome to your Expo app 👋
+# Pizza Fidélité App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## Description
 
-## Get started
+Pizza Fidélité est une application mobile développée avec Expo React Native, conçue pour gérer un programme de fidélité pour une pizzeria. Elle permet aux clients de gagner des points lors de leurs achats et aux administrateurs de gérer les récompenses.
 
-1. Install dependencies
+## Fonctionnalités
 
-   ```bash
+- Authentification des utilisateurs (clients et administrateurs)
+- Génération et scan de QR codes pour les achats
+- Suivi des points de fidélité des clients
+- Tableau de bord client avec historique des achats et récompenses
+- Interface admin pour scanner les QR codes et valider les achats
+- Système de récompenses (par exemple, une pizza gratuite tous les 9 achats)
+
+## Technologies utilisées
+
+- Expo React Native
+- TypeScript
+- Firebase (Authentication et Firestore)
+- Expo Router pour la navigation
+- React Native QR Code generator et scanner
+
+## Prérequis
+
+- Node.js (version 12 ou supérieure)
+- npm ou yarn
+- Expo CLI (`npm install -g expo-cli`)
+- Un compte Firebase
+
+## Installation
+
+1. Clonez le dépôt :
+   ```
+   git clone https://github.com/votre-username/pizza-fidelite-app.git
+   cd pizza-fidelite-app
+   ```
+
+2. Installez les dépendances :
+   ```
    npm install
    ```
-
-2. Start the app
-
-   ```bash
-    npx expo start
+   ou
+   ```
+   yarn install
    ```
 
-In the output, you'll find options to open the app in a
+3. Configurez Firebase :
+   - Créez un projet Firebase sur [Firebase Console](https://console.firebase.google.com/)
+   - Ajoutez une application web à votre projet Firebase
+   - Copiez les informations de configuration
+   - Créez un fichier `config/firebase.ts` et ajoutez vos informations de configuration
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+4. Lancez l'application :
+   ```
+   npx expo start
+   ```
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## Structure du projet
 
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+```
+PizzaLoyaltyApp/
+│
+├── app/                  # Écrans de l'application
+├── components/           # Composants réutilisables
+├── config/               # Configuration (Firebase, etc.)
+├── constants/            # Constantes de l'application
+├── hooks/                # Hooks personnalisés
+├── services/             # Services (base de données, etc.)
+├── utils/                # Fonctions utilitaires
+├── assets/               # Images, polices, etc.
+│
+├── App.tsx               # Point d'entrée de l'application
+├── app.json              # Configuration Expo
+├── babel.config.js       # Configuration Babel
+├── package.json          # Dépendances et scripts
+└── tsconfig.json         # Configuration TypeScript
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Contribution
 
-## Learn more
+Les contributions sont les bienvenues ! Pour contribuer :
 
-To learn more about developing your project with Expo, look at the following resources:
+1. Forkez le projet
+2. Créez votre branche de fonctionnalité (`git checkout -b feature/AmazingFeature`)
+3. Committez vos changements (`git commit -m 'Add some AmazingFeature'`)
+4. Poussez vers la branche (`git push origin feature/AmazingFeature`)
+5. Ouvrez une Pull Request
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## Licence
 
-## Join the community
+Distribué sous la licence MIT. Voir `LICENSE` pour plus d'informations.
 
-Join our community of developers creating universal apps.
+## Contact
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Votre Nom - [@votre_twitter](https://twitter.com/votre_twitter) - email@example.com
+
+Lien du projet : [https://github.com/votre-username/pizza-fidelite-app](https://github.com/votre-username/pizza-fidelite-app)
